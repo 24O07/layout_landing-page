@@ -99,19 +99,11 @@
   background-size: cover;
   transition: transform 0.3s;
 
-
-  &:hover{
-      opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
+  &:hover {
+    transform: scale(1.1);
+    color: transparent;
   }
 
-
-
-
-  &:hover{
-    transform: scale(1.2);
-  }
 
 @include on-tablet{
     height: 32px;
@@ -124,19 +116,11 @@
    position: relative;
   transition: transform 0.3s ease;
   cursor: pointer;
-  color: #000;
   text-decoration: none;
   font-weight: 500;
 
+  color: transparent;
 
-    color: transparent;
-  font-size: 0;
-
-
-  &:hover {
-    transform: scale(1.1);
-    color: transparent;
-  }
 
     &::after {
     content: "+1 234 555-55-55";
@@ -145,7 +129,7 @@
     top:50%;
     transform: translateY(-50%);
     color: #000;
-font-size: 12px;
+    font-size: 12px;
 
 line-height: 16px;
 letter-spacing: 2px;
@@ -157,8 +141,7 @@ text-transform: uppercase;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    font-size: 12px;
-  }
+
 
   &:hover::after {
     opacity: 1;
@@ -171,9 +154,6 @@ text-transform: uppercase;
     height: 32px;
   }
 }
-
-
-
 
 
   &--menu{
@@ -190,6 +170,7 @@ text-transform: uppercase;
   &--close{
    background-image: url(../../images/icon-close-header.png);
   }
+}
 }
 
 /* #endregion icon */
