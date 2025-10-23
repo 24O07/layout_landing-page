@@ -101,6 +101,15 @@
 
 
   &:hover{
+      opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  }
+
+
+
+
+  &:hover{
     transform: scale(1.2);
   }
 
@@ -112,7 +121,60 @@
 
   &--phone{
     background-image: url(../../images/Icon-Phone-call.png);
+   position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+
+
+    color: transparent;
+  font-size: 0;
+
+
+  &:hover {
+    transform: scale(1.1);
+    color: transparent;
   }
+
+    &::after {
+    content: "+1 234 555-55-55";
+    position: absolute;
+    right: 130%;;
+    top:50%;
+    transform: translateY(-50%);
+    color: #000;
+font-size: 12px;
+
+line-height: 16px;
+letter-spacing: 2px;
+text-align: right;
+vertical-align: middle;
+text-transform: uppercase;
+
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    font-size: 12px;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(10px, -50%);
+  }
+
+  @include on-tablet {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+
+
 
   &--menu{
    background-image: url(../../images/burger-menu.png);
@@ -257,7 +319,10 @@
     transform: scale(1.2);
   }
 }
+
 }
+
+
 
 /* #endregion top-bar */
 
@@ -323,8 +388,19 @@
 
 .recommended__product{
 
+
+
   &--photo{
     width: 100%;
+
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
   }
 
   &--title{
@@ -353,6 +429,7 @@ line-height: 140%;
 
 }
 
+
 }
 
 .positioned{
@@ -361,6 +438,9 @@ line-height: 140%;
 @include on-desktop{
   grid-column: span 4 ;
 }
+
+
+
 
 }
 
@@ -491,8 +571,9 @@ line-height: 140%;
     @include page-grid;
 
     margin-bottom: 16px;
-  }
 
+
+  }
   &__link{
     @include on-tablet{
       grid-column: span 3;
@@ -508,6 +589,14 @@ line-height: 140%;
      width: 100%;
      height: 100%;
      object-fit: cover;
+
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(26, 24, 24, 0.1);
+  }
 
 
   }
@@ -632,6 +721,11 @@ padding-inline: 48px;
 .content{
     display: grid;
     row-gap: 48px ;
+    margin-bottom: 64px ;
+
+    @include on-desktop{
+      margin-bottom: 120px;
+    }
 
     @include on-tablet{
         row-gap: 80px;
@@ -664,6 +758,8 @@ padding-inline: 48px;
         }
 
     }
+
+
 }
 
 
