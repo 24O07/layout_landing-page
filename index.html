@@ -9,7 +9,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+
+    <title>Bang & Olufsen</title>
+    <link
+      rel="icon shortcut"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
@@ -26,6 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="src/scripts/main.js"
       defer
@@ -48,9 +58,12 @@
             </a>
             <div class="top-bar__icons">
               <a
-                href="#"
+                href="tel:+1 234 5555-55-55"
                 class="icon icon--phone"
-              ></a>
+              >
+                +1 234 555-55-55
+              </a>
+
               <a
                 href="#menu"
                 class="icon icon--menu"
@@ -316,7 +329,7 @@
 
           <div class="contact-us content">
             <div class="content__input">
-              <form>
+              <form onsubmit="this.reset(); return false;">
                 <input
                   type="text"
                   placeholder="Name"
@@ -336,16 +349,39 @@
             </div>
             <div class="content__contact-us-info">
               <p class="contact-us__label">Phone</p>
-              <p class="contact-us__value-text">+1 234 5555-55-55</p>
+              <p class="contact-us__value-text">
+                <a
+                  href="tel:+123455555555"
+                  class="contact-us__link"
+                >
+                  +1 234 5555-55-55
+                </a>
+              </p>
+
               <p class="contact-us__label">Email</p>
-              <p class="contact-us__value-text">hello@bang&solufen.com</p>
+              <p class="contact-us__value-text">
+                <a
+                  href="mailto:hello@bang&solufen.com"
+                  class="contact-us__link"
+                >
+                  hello@bang&solufen.com
+                </a>
+              </p>
+
               <p class="contact-us__label">Address</p>
               <p class="contact-us__value-text">
-                400 first ave.
-                <br />
-                suite 700
-                <br />
-                Minneapolis, MN 55401
+                <a
+                  href="https://maps.google.com/?q=400+First+Ave+Suite+700+Minneapolis+MN+55401"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-us__link"
+                >
+                  400 first ave.
+                  <br />
+                  suite 700
+                  <br />
+                  Minneapolis, MN 55401
+                </a>
               </p>
             </div>
           </div>
